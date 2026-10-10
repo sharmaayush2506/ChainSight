@@ -20,5 +20,5 @@ def get_provider(chain: str, *, demo: bool) -> ChainProvider:
     return TronProvider(settings.trongrid_api_key)
 
 
-__all__ = ["ChainProvider", "Transfer", "get_provider", "is_valid_address",
+__all__ = ["ChainProvider", "EthereumProvider", "TronProvider", "Transfer", "get_provider", "is_valid_address",
            "normalize_address", "SUPPORTED_CHAINS"]

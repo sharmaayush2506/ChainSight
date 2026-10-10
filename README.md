@@ -31,11 +31,19 @@ Demo mode uses a synthetic but realistic laundering scenario: victims pay a scam
 
 TinyFish replies are simulated in demo mode, and every simulated item is labelled that way in the UI and the PDF.
 
+Or with Docker:
+
+```bash
+docker build -t chainsight . && docker run -p 8000:8000 --env-file .env chainsight
+```
+
 Run the tests:
 
 ```bash
 python -m pytest -q
 ```
+
+The presenter walkthrough is in [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md).
 
 ## Live mode
 
@@ -46,6 +54,13 @@ cp .env.example .env
 #   ETHERSCAN_API_KEY  from https://etherscan.io/myapikey (needed for Ethereum)
 #   TRONGRID_API_KEY   optional; Tron works without it but is rate limited
 uvicorn app.main:app
+```
+
+Check that the keys and endpoints work (and get timings for the deck) before demoing:
+
+```bash
+python scripts/check_live.py            # TronGrid, Etherscan, TinyFish Search + Fetch
+python scripts/check_live.py --agent    # also runs one metered Web Agent task
 ```
 
 `CHAINSIGHT_MODE`:
@@ -132,4 +147,6 @@ app/
   static/            dashboard (plain JS + Cytoscape.js, vendored so it works offline)
 data/                labels.json, vasps.json, sanctions.json
 tests/               pipeline tests + mocked-HTTP tests for the live clients
+scripts/check_live.py  smoke test of the real APIs with your keys
+docs/DEMO_SCRIPT.md    presenter walkthrough and judge Q&A
 ```
