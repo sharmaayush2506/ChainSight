@@ -1,0 +1,45 @@
+{
+  "_comment": "VASP registry. Adding an exchange = adding an entry. 'start_url' is only where the TinyFish agent starts; the agent finds the current law-enforcement process itself, so stale hints are corrected at runtime. 'fallback' is what the report shows when the agent fails, and is marked for manual verification.",
+  "binance": {
+    "name": "Binance",
+    "jurisdiction": "Global (FIU-IND registered reporting entity)",
+    "start_url": "https://www.binance.com/en/support/law-enforcement",
+    "fallback": {"portal_url": "https://www.binance.com/en/support/law-enforcement", "process": "Submit via the Binance Law Enforcement Request System (official email domain required)."}
+  },
+  "okx": {
+    "name": "OKX",
+    "jurisdiction": "Global",
+    "start_url": "https://www.okx.com/help",
+    "fallback": {"portal_url": "https://www.okx.com/help", "process": "Search the OKX help centre for the law-enforcement request guide."}
+  },
+  "coinbase": {
+    "name": "Coinbase",
+    "jurisdiction": "US / Global",
+    "start_url": "https://www.coinbase.com/legal/law_enforcement",
+    "fallback": {"portal_url": "https://www.coinbase.com/legal/law_enforcement", "process": "Use the Coinbase law-enforcement request portal."}
+  },
+  "kraken": {
+    "name": "Kraken",
+    "jurisdiction": "US / Global",
+    "start_url": "https://www.kraken.com/legal",
+    "fallback": {"portal_url": "https://www.kraken.com/legal", "process": "Find the law-enforcement section under Kraken legal pages."}
+  },
+  "wazirx": {
+    "name": "WazirX",
+    "jurisdiction": "India (FIU-IND registered)",
+    "start_url": "https://wazirx.com",
+    "fallback": {"portal_url": "https://wazirx.com", "process": "Locate the compliance / grievance officer contact on the site."}
+  },
+  "coindcx": {
+    "name": "CoinDCX",
+    "jurisdiction": "India (FIU-IND registered)",
+    "start_url": "https://coindcx.com",
+    "fallback": {"portal_url": "https://coindcx.com", "process": "Locate the law-enforcement / grievance officer contact on the site."}
+  },
+  "huobi": {
+    "name": "HTX (Huobi)",
+    "jurisdiction": "Global",
+    "start_url": "https://www.htx.com",
+    "fallback": {"portal_url": "https://www.htx.com", "process": "Locate the law-enforcement request page via the support centre."}
+  }
+}

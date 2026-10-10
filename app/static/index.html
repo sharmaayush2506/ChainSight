@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChainSight</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/vendor/cytoscape.min.js"></script><!-- cytoscape@3.28.1, vendored so the demo works offline -->
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo">◈</span> ChainSight <small>crypto fraud fund tracing &amp; VASP discovery</small></div>
+  <div id="modes" class="modes"></div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <section class="card">
+      <h2>New case</h2>
+      <form id="caseForm">
+        <label>Chain
+          <select name="chain" id="chain">
+            <option value="tron">Tron (TRC-20)</option>
+            <option value="ethereum">Ethereum</option>
+          </select>
+        </label>
+        <label>Reported wallet address
+          <input name="address" id="address" required autocomplete="off" spellcheck="false" placeholder="T... or 0x...">
+        </label>
+        <label>Complaint reference (NCRP / FIR)
+          <input name="complaint_ref" placeholder="e.g. NCRP-31509240012345">
+        </label>
+        <label>P2P listing URL <span class="muted">(optional)</span>
+          <input name="p2p_url" type="url" placeholder="https://...">
+        </label>
+        <label class="check"><input type="checkbox" name="demo" id="demo"> Use demo dataset (offline)</label>
+        <div class="row">
+          <button type="submit" class="primary">Trace wallet</button>
+          <button type="button" id="demoBtn" class="ghost">Load demo case</button>
+        </div>
+        <p id="formError" class="error"></p>
+      </form>
+    </section>
+    <section class="card">
+      <h2>Recent cases</h2>
+      <ul id="caseList" class="caselist"></ul>
+    </section>
+  </aside>
+
+  <main id="main">
+    <div class="empty">
+      <h1>Trace a reported wallet</h1>
+      <p>ChainSight follows the money hop by hop, spots laundering shapes, finds the exchange (VASP)
+        that received the funds, then uses TinyFish web agents to check public scam reports,
+        find that exchange's law-enforcement process and capture hashed evidence.</p>
+      <p class="muted">Click <b>Load demo case</b> to see the full flow without any API keys.</p>
+    </div>
+  </main>
+</div>
+
+<div id="nodePanel" class="nodepanel hidden"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

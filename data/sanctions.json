@@ -1,0 +1,6 @@
+{
+  "_comment": "Local copy of sanctioned / abuse-listed addresses. Seeded with a well-known OFAC entry; refresh from the OFAC SDN list (digital currency address fields) and other public abuse lists. Addresses are compared case-insensitively.",
+  "entries": [
+    {"address": "0xd90e2f925da726b50c4ed8d0fb90ad053324f31b", "chain": "ethereum", "list": "OFAC SDN", "entity": "Tornado Cash Router"}
+  ]
+}

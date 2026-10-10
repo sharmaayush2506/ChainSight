@@ -1,0 +1,17 @@
+{
+  "_comment": "Seed list of publicly labelled exchange hot wallets and other entities. Public label data is limited and goes stale: verify every label against an explorer before relying on it. Add entries here (or load a bigger dataset) to extend coverage; no code change needed.",
+  "ethereum": {
+    "0x28c6c06298d514db089934071355e5743bf21d60": {"entity": "binance", "name": "Binance 14 (hot wallet)", "type": "exchange", "source": "public explorer label"},
+    "0x21a31ee1afc51d94c2efccaa2092ad1028285549": {"entity": "binance", "name": "Binance 15 (hot wallet)", "type": "exchange", "source": "public explorer label"},
+    "0xdfd5293d8e347dfe59e90efd55b2956a1343963d": {"entity": "binance", "name": "Binance 16 (hot wallet)", "type": "exchange", "source": "public explorer label"},
+    "0x56eddb7aa87536c09ccc2793473599fd21a8b17f": {"entity": "binance", "name": "Binance 17 (hot wallet)", "type": "exchange", "source": "public explorer label"},
+    "0x71660c4005ba85c37ccec55d0c4493e66fe775d3": {"entity": "coinbase", "name": "Coinbase 1", "type": "exchange", "source": "public explorer label"},
+    "0x503828976d22510aad0201ac7ec88293211d23da": {"entity": "coinbase", "name": "Coinbase 2", "type": "exchange", "source": "public explorer label"},
+    "0x2910543af39aba0cd09dbb2d50200b3e800a63d2": {"entity": "kraken", "name": "Kraken 1", "type": "exchange", "source": "public explorer label"},
+    "0x6cc5f688a315f3dc28a7781717a9a798a59fda7b": {"entity": "okx", "name": "OKX (hot wallet)", "type": "exchange", "source": "public explorer label"},
+    "0xd90e2f925da726b50c4ed8d0fb90ad053324f31b": {"entity": "tornado_cash", "name": "Tornado Cash Router", "type": "mixer", "source": "OFAC SDN (2022)"}
+  },
+  "tron": {
+    "TNXoiAJ3dct8Fjg4M9fkLFh9S2v9TXc32G": {"entity": "binance", "name": "Binance (hot wallet)", "type": "exchange", "source": "public explorer label - verify"}
+  }
+}
